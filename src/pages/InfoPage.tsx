@@ -1,7 +1,7 @@
 const InfoPage = () => {
   return (
     <div>
-      <h1 className="text-center">Info Page</h1>
+      <h1>Info Page</h1>
     </div>
   );
 };

@@ -1,0 +1,32 @@
+// ✅ Variabelen (bovenaan je bestand of in een aparte _variables.scss)
+$background-dark: #121212;
+$text-light: #ffffff;
+$spacing-lg: 1.5rem;
+
+// ✅ SCSS
+.root-layout {
+  background-color: $background-dark;
+  color: $text-light;
+  min-height: 100vh;
+
+  .brand {
+    font-weight: bold;
+  }
+
+  .nav-links {
+    font-weight: bold;
+
+    a {
+      color: $text-light;
+
+      &:hover {
+        text-decoration: underline;
+        opacity: 0.8;
+      }
+    }
+  }
+
+  .main-content {
+    margin-top: $spacing-lg;
+  }
+}

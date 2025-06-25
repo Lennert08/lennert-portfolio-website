@@ -3,7 +3,7 @@ import { createRoot } from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import HomePage from "./pages/HomePage.tsx";
 import InfoPage from "./pages/InfoPage.tsx";
-import RootLayout from "./layouts/RootLayout.tsx";
+import RootLayout from "./layouts/rootlayout/RootLayout.tsx";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 const browserRouter = createBrowserRouter([

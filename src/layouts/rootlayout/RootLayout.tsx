@@ -2,18 +2,19 @@ import { Outlet, Link } from "react-router-dom";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
+import "./RootLayout.scss"; // vergeet deze niet toe te voegen
 
 const RootLayout = () => {
   return (
-    <div className="bg-zinc-900 text-white min-h-screen">
+    <div className="root-layout">
       <Navbar bg="dark" variant="dark" expand="lg">
         <Container>
-          <Navbar.Brand as={Link} to="/" className="font-bold">
+          <Navbar.Brand as={Link} to="/" className="brand">
             Home
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="main-navbar" />
           <Navbar.Collapse id="main-navbar">
-            <Nav className="font-bold">
+            <Nav className="nav-links">
               <Nav.Link as={Link} to="/info">
                 Info
               </Nav.Link>
@@ -25,7 +26,7 @@ const RootLayout = () => {
         </Container>
       </Navbar>
 
-      <Container className="mt-4">
+      <Container className="main-content">
         <Outlet />
       </Container>
     </div>
