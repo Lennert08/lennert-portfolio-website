@@ -1,0 +1,70 @@
+body {
+    background-color: black;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+}
+
+p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+
+.gradient-text {
+  font-size: 5rem;
+  font-weight: bold;
+  background: linear-gradient(90deg, #ff00ff, #00ffff); // jouw kleuren
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-button {
+  position: relative;
+  display: inline-block;
+  padding: 14px 32px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: white;
+  background: linear-gradient(90deg, #6a11cb, #2575fc);
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  z-index: 1;
+  overflow: hidden;
+  box-shadow: 0 0 15px rgba(100, 149, 237, 0.5); // zachte glow
+  transition: all 0.3s ease;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 25px rgba(100, 149, 237, 0.8); // sterkere glow
+  }
+
+  // fading animated gradient
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -50%;
+    width: 200%;
+    height: 100%;
+    background: linear-gradient(90deg, #6a11cb, #2575fc, #6a11cb);
+    animation: glowing-gradient 4s linear infinite;
+    z-index: -1;
+  }
+
+  // extra glow spread on hover
+  &:hover::before {
+    filter: blur(2px);
+  }
+}
+
+@keyframes glowing-gradient {
+  0% {
+    left: -50%;
+  }
+  100% {
+    left: 0%;
+  }
+}

@@ -1,10 +1,11 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import HomePage from "./pages/HomePage.tsx";
+import HomePage from "./pages/homepage/HomePage.tsx";
 import InfoPage from "./pages/InfoPage.tsx";
 import RootLayout from "./layouts/rootlayout/RootLayout.tsx";
 import "bootstrap/dist/css/bootstrap.min.css";
+import "./styles/main.scss";
 
 const browserRouter = createBrowserRouter([
   {

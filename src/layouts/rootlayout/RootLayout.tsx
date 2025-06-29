@@ -14,7 +14,7 @@ const RootLayout = () => {
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="main-navbar" />
           <Navbar.Collapse id="main-navbar">
-            <Nav className="nav-links">
+            <Nav>
               <Nav.Link as={Link} to="/info">
                 Info
               </Nav.Link>
@@ -26,7 +26,7 @@ const RootLayout = () => {
         </Container>
       </Navbar>
 
-      <Container className="main-content">
+      <Container>
         <Outlet />
       </Container>
     </div>
