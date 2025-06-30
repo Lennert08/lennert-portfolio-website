@@ -61,5 +61,36 @@
   }
 }
 
+@media (max-width: 830px) {
+  .homepage-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .left-side,
+  .right-side {
+    margin-top: 20px;
+    flex: unset;
+    width: 100%;
+  }
+
+  .profile-photo {
+    width: 80%;
+    height: auto;        
+  }
+
+    .right-side {
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media (max-width: 1200px) {
+  .profile-photo {
+    width: 70%;
+    height: 70%;
+  }
+}
 
 
