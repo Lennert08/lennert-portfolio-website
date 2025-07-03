@@ -10,6 +10,10 @@ p {
     font-family: 'Roboto', sans-serif;
 }
 
+h1, h2, h3 {
+    font-family: 'Roboto', sans-serif;
+    color: white;
+}
 
 
 .gradient-text {
@@ -20,9 +24,7 @@ p {
   -webkit-text-fill-color: transparent;
 }
 
-.hero-button {
-  position: relative;
-  display: inline-block;
+.button-style {
   padding: 14px 32px;
   font-size: 1rem;
   font-weight: 600;
@@ -31,40 +33,7 @@ p {
   border: none;
   border-radius: 50px;
   cursor: pointer;
-  z-index: 1;
-  overflow: hidden;
   box-shadow: 0 0 15px rgba(100, 149, 237, 0.5); // zachte glow
-  transition: all 0.3s ease;
-
-  &:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 0 25px rgba(100, 149, 237, 0.8); // sterkere glow
-  }
-
-  // fading animated gradient
-  &::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: -50%;
-    width: 200%;
-    height: 100%;
-    background: linear-gradient(90deg, #6a11cb, #2575fc, #6a11cb);
-    animation: glowing-gradient 4s linear infinite;
-    z-index: -1;
-  }
-
-  // extra glow spread on hover
-  &:hover::before {
-    filter: blur(2px);
-  }
 }
 
-@keyframes glowing-gradient {
-  0% {
-    left: -50%;
-  }
-  100% {
-    left: 0%;
-  }
-}
+

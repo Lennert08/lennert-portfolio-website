@@ -1,11 +1,18 @@
 import profilePicture from "../../assets/images/profilepicture.png";
 import "./homepage.scss";
+import { useNavigate } from "react-router-dom";
 
 const HomePage = () => {
+  const navigate = useNavigate();
+
+  const handleNavigateToProjectPage = () => {
+    navigate("/projecten");
+  };
+
   return (
     <div>
-      <div className="homepage-container">
-        <div className="left-side">
+      <div className="home-main-container">
+        <div className="about-me-container">
           <h1 className="gradient-text">Lennert</h1>
           <h1 className="gradient-text">Van Daele</h1>
           <br />
@@ -16,13 +23,18 @@ const HomePage = () => {
             experience.
           </p>
           <br />
-          <button className="hero-button">Mijn projecten</button>
+          <button
+            className="button-style"
+            onClick={handleNavigateToProjectPage}
+          >
+            Mijn projecten
+          </button>
         </div>
-        <div className="right-side">
+        <div className="photo-container">
           <img
-            className="profile-photo"
             src={profilePicture}
             alt="profilepicture"
+            className="profile-picture"
           />
         </div>
       </div>

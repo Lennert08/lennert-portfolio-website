@@ -1,96 +1,33 @@
-.homepage-container {
+.home-main-container {
   display: flex;
-  margin-top: 50px;
+  flex-direction: row;
 }
 
-.left-side {
-  flex: 1;
-  margin-top: 50px;
-}
-
-.right-side {
-  flex: 1;
+.container-base {
   display: flex;
-  justify-content: flex-end;
+  flex-direction: column;
+  margin: 50px;
 }
 
-.profile-photo {
-  width: 500px;
-  height: 500px;
+.about-me-container {
+  @extend .container-base
+}
+
+.photo-container {
+  @extend .container-base;
+}
+
+.profile-picture {
+  width: 100%;
   border-radius: 20px;
-  object-fit: cover;
-  border: 4px solid rgba(255, 255, 255, 0.8);
-  box-shadow: 0 0 30px rgba(37, 117, 252, 0.4); // blauwachtige glow
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
-
-  &:hover {
-    transform: scale(1.03);
-    box-shadow: 0 0 45px rgba(37, 117, 252, 0.6); // sterkere glow
-    cursor: pointer;
-  }
-
-  // optioneel: animatie-glans
-  position: relative;
-  overflow: hidden;
-
-  &::after {
-    content: "";
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background: linear-gradient(
-      120deg,
-      rgba(255, 255, 255, 0.1) 0%,
-      rgba(255, 255, 255, 0.3) 50%,
-      rgba(255, 255, 255, 0.1) 100%
-    );
-    transform: rotate(25deg);
-    animation: shine 5s infinite;
-    pointer-events: none;
-  }
 }
 
-@keyframes shine {
-  0% {
-    transform: translateX(-100%) rotate(25deg);
-  }
-  100% {
-    transform: translateX(100%) rotate(25deg);
-  }
-}
 
-@media (max-width: 830px) {
-  .homepage-container {
+
+@media (max-width: 768px) {
+  .home-main-container {
     flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .left-side,
-  .right-side {
-    margin-top: 20px;
-    flex: unset;
-    width: 100%;
-  }
-
-  .profile-photo {
-    width: 80%;
-    height: auto;        
-  }
-
-    .right-side {
-    justify-content: center;
-    align-items: center;
+    align-items: center; /* optioneel: centreren */
   }
 }
-
-@media (max-width: 1100px) {
-  .profile-photo {
-    width: 70%;
-    height: 70%;
-  }
-}
-
 

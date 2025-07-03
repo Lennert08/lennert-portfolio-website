@@ -15,8 +15,8 @@ const RootLayout = () => {
           <Navbar.Toggle aria-controls="main-navbar" />
           <Navbar.Collapse id="main-navbar">
             <Nav>
-              <Nav.Link as={Link} to="/info">
-                Info
+              <Nav.Link as={Link} to="/projecten">
+                Projecten
               </Nav.Link>
               <Nav.Link as={Link} to="/pricing">
                 Pricing
