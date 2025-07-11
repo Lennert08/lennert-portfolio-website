@@ -1,0 +1,23 @@
+.skill-box{
+    background-color: 	white;
+    margin: 25px;
+    margin-top: 70px;
+    border-radius: 20px;
+    width: 280px;
+
+    img {
+        width: 50px;
+        height: auto;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        margin: 30px;
+    }
+    h2 {
+        text-align: center;
+        font-size: 2rem;
+        padding: 10px;
+        background-color: midnightblue;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+    }
+}

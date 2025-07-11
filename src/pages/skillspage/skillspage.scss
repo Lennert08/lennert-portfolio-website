@@ -1,0 +1,11 @@
+.skills-main-container {
+    display : flex;
+    flex-direction : row;
+}
+
+@media (max-width: 768px) {
+  .skills-main-container {
+    flex-direction: column;
+    align-items: center; /* optioneel: centreren */
+  }
+}

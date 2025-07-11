@@ -1,17 +1,23 @@
 import "./projectbox.scss";
+import { Link } from "react-router-dom";
 
 interface ProjectBoxProps {
   imageUrl: string;
   title: string;
+  detailpageurl: string;
 }
 
-const ProjectBox: React.FC<ProjectBoxProps> = ({ imageUrl, title }) => {
+const ProjectBox: React.FC<ProjectBoxProps> = ({
+  imageUrl,
+  title,
+  detailpageurl,
+}) => {
   return (
     <>
-      <div className="project-box">
+      <Link to={detailpageurl} className="project-box">
         <img src={imageUrl} alt={title} />
         <h2>{title}</h2>
-      </div>
+      </Link>
     </>
   );
 };
