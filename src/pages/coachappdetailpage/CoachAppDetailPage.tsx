@@ -1,9 +1,11 @@
+import VideoComponent from "../../components/videocomponent/VideoComponent";
 import "./coachappdetailpage.scss";
 
 const CoachAppDetailPage = () => {
   return (
     <div>
-      <h1>Coaching Applicatie</h1>
+      <h1 className="gradient-text">Coaching Applicatie</h1>
+      <VideoComponent />
     </div>
   );
 };
