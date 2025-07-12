@@ -3,6 +3,12 @@
     margin: 50px;
     border-radius: 20px;
     text-decoration: none; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 30px rgba(25, 25, 112, 0.5); // diepe blauwe schaduw
+    }
 
     img {
         width: 450px;

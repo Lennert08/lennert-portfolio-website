@@ -1,9 +1,13 @@
-import videoUrl from "../../assets/videos/coachapp-demo-video.mp4";
+import "./videocomponent.scss";
 
-const VideoComponent = () => {
+interface VideoComponentProps {
+  videoPath?: string;
+}
+
+const VideoComponent: React.FC<VideoComponentProps> = ({ videoPath }) => {
   return (
-    <video loop autoPlay muted playsInline>
-      <source src={videoUrl} type="video/mp4" />
+    <video loop autoPlay muted playsInline className="video-component">
+      <source src={videoPath} type="video/mp4" />
       Your browser does not support the video tag.
     </video>
   );

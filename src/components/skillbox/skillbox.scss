@@ -4,6 +4,12 @@
     margin-top: 70px;
     border-radius: 20px;
     width: 280px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    
+    &:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0, 0, 128, 0.3); // zachte midnightblue glow
+    }
 
     img {
         width: 50px;

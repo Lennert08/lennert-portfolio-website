@@ -2,3 +2,41 @@ h1 {
   text-align: center;
   margin-top: 30px;
 }
+
+a {
+    color: #00bfff;
+  text-decoration: none;
+}
+
+.coach-app-detail-container {
+  display: flex;
+  flex-direction: row;
+  margin: 50px;
+}
+
+.coach-app-detail-p{
+  margin: 30px;
+  margin-top: 0px;
+}
+
+.coach-app-detail-container {
+  margin: 70px;
+  margin-bottom: 20px;
+}
+
+.coach-app-detail-github-buttons-container {
+  display: flex;
+  justify-content: center;
+
+  .button-style {
+  margin: 40px;// 👈 extra spacing alleen hier
+  }
+}
+
+
+@media (max-width: 768px) {
+  .coach-app-detail-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
