@@ -1,6 +1,7 @@
 import profilePicture from "../../assets/images/profilepicture.png";
 import "./homepage.scss";
 import { useNavigate } from "react-router-dom";
+import lennertCv from "../../assets/images/cv-Lennert-2025.pdf";
 
 const HomePage = () => {
   const navigate = useNavigate();
@@ -29,6 +30,10 @@ const HomePage = () => {
           >
             Mijn projecten
           </button>
+          <br />
+          <a href={lennertCv} download="cv-lennert.pdf">
+            <button className="button-style">Download mijn CV</button>
+          </a>
         </div>
         <div className="photo-container">
           <img
